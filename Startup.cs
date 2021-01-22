@@ -24,7 +24,16 @@ namespace SampleParser
         {
 
             services.AddControllers();
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(
+                config =>
+                {
+                    config.SwaggerDoc("v1", new OpenApiInfo
+                    {
+                        Version = "v1",
+                        Title = "Get Word Occurences and Count",
+                        Description = "Get Word Occurences and Count"
+                    });
+                });
             
         }
 
@@ -34,9 +43,8 @@ namespace SampleParser
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SampleParser v1"));
-            }
+             }
+            app.UseSwaggerUI(config => { config.SwaggerEndpoint("v1/swagger.json", "GetWordCount"); });
 
             app.UseHttpsRedirection();
 
