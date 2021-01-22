@@ -7,11 +7,18 @@
 5.Click on Run Button, now application is in run mode.
 6.Open any browser of choice and enter.
   1) API reference to Get the List of Words and their occurences
-    https://localhost:44311/word  
+    AdditonalInfo : The api reference is used for parsing the entire text file and then find out the number of occurences of each of the words       
+    https://localhost:44311/word  (Note :localhost port could vary)
     
   2) API reference to Get the TOP 10 most used words with their occurences
-    https://localhost:44311/word/Top10Words
+    AdditionalInfo : The api reference is used for parsing the entire text file and then find out the Top 10 occurences of words    
+    https://localhost:44311/Top10Words (Note :localhost port could vary)
+    
   3) API reference to check to see if a random word exists in the the txt file and if exists prints word with occurences
-    https://localhost:44311/word/GetWordCount?word=University (Note: to check for any other words, replace the query stringparam value 
+    AdditionalInfo :The api reference is used for parsing the entire text file and then find out the word that is supplied as querystring param and displays occurences of word     
+    https://localhost:44311/GetWordCount?word=University (Note: to check for any other words, replace the query stringparam value, localhost port could vary) 
+    
   4) API refernce to get the references while connecting to OWLBOT Api's
-    https://localhost:44311/word/GetWordDefinition?word=University
+   AdditonalInfo: The api reference is used contact OwlBot apis by passing a word as querystring parameter and gets back the definition of the word if found
+       
+    https://localhost:44311/GetWordDefinition?word=University (Note :localhost port could vary)
